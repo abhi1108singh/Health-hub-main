@@ -1,0 +1,21 @@
+[functions]
+  node_bundler = "esbuild"
+  directory = "netlify/functions"
+  external_node_modules = [
+    "express",
+    "serverless-http",
+    "mongoose",
+    "cors",
+    "dotenv",
+    "@google/generative-ai",
+    "multer",
+    "jsonwebtoken",
+    "bcryptjs",
+    "axios"
+  ]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api"
+  status = 200
+  force = true
